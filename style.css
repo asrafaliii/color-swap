@@ -1,0 +1,33 @@
+
+.title{
+    position: relative;
+    color: #262626;
+    padding: 20px 50px;
+}
+.title:before {
+    background: #262626;
+    color: #fff;
+    content: 'TUSOSS';
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 50px;
+    -webkit-clip-path: polygon(0% 0%, 30% 0%, 30% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 30% 0%, 30% 100%, 0% 100%);
+    animation: slide 4s 1s linear infinite;
+}
+@keyframes slide {
+    50%{
+        -webkit-clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 70% 100%);
+    }
+}
+body{
+    height: 100vh;
+    font-size: 200px;
+    font-family: sans-serif;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
